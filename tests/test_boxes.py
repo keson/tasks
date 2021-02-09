@@ -28,6 +28,7 @@ def test_give_boxes_group_boxes_count():
 def test_give_boxes_group_boxes_dict():
     """tests exact function return"""
     assert give_boxes(5) == {'middle': 1}
-    assert give_boxes(12) == {'big': 1, 'small': 1, 'group': 1}
+    assert give_boxes(12) == {'middle': 2, 'group': 1}
+    assert give_boxes(15) == {'big': 2, 'group': 1}
     assert give_boxes(35) == {'big': 4, 'group': 2}
     assert give_boxes(95) == {'big': 10, 'middle': 1, 'group': 4}
